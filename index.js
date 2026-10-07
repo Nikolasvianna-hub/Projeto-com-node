@@ -13,7 +13,7 @@ app.get("/consulta/:parametro", function(req, res) {
     res.send("retorno consulta:" + req.params.parametro);
 });
 
-app.get("/cadastro/:nome?", function(req, res) {
+app.get("/cadastro/{:nome}", function(req, res) {
     var nome = req.params.nome;
     if (nome) {
         res.send("<h1>produto " + nome + " criado!</h1>");
